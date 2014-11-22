@@ -74,8 +74,18 @@ app.factory('AllService', function(){
         successFunc(spoliers);
       }
     });
-
-
+  };
+  methods.getSpolier = function(spolierId, successFunc){
+    var spolierQuery = new AV.Query(spolierObject);
+    spolierQuery.get(spolierId,{
+      success: function(result){
+        var spolier = {};
+        spolier.id = result.id;
+        spolier.content = result.get('content');
+        spolier.hates = result.get('hates');
+        successFunc(spolier);
+      }
+    });
   };
   methods.newSpolier = function(movieId, message, successFunc){
     var spolier = spolierObject.new();
@@ -83,6 +93,16 @@ app.factory('AllService', function(){
     movie.id = movieId;
     spolier.set('content', message);
     spolier.set('movie', movie);
+    spolier.save(null, {
+      success: function(result){
+        successFunc(result);
+      }
+    });
+  };
+  methods.hateSpolier = function(spolierId, successFunc){
+    var spolier = spolierObject.new();
+    spolier.id = spolierId;
+    spolier.increment('hates');
     spolier.save(null, {
       success: function(result){
         successFunc(result);

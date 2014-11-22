@@ -1,4 +1,9 @@
-<div>
-  <div>Content: {{spolier.content}}</div>
-  <div>Hates: {{spolier.hates}}</div>
+<div class="row">
+  <div class="jumbotron">
+    <h1>{{spolier.content}}</h1>
+    <div>
+      <button type="button" class="btn btn-danger" ng-disabled="disabled" ng-click="hate()">{{spolier.hates}} Hate </button>
+    </div>
+  </div>
+
 </div>

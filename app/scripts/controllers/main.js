@@ -44,9 +44,21 @@ app.controller('MovieCtrl', function ($scope, $routeParams, AllService) {
 
 });
 
-app.controller('SpolierCtrl', function ($scope) {
-  $scope.spolier = {
-    content: 'hahaha',
-    hates: 13
+app.controller('SpolierCtrl', function ($scope, $routeParams, AllService) {
+  $scope.id = $routeParams.id;
+  $scope.disabled = false;
+  $scope.refresh = function(){
+    AllService.getSpolier($scope.id,function(spolier){
+      $scope.spolier = spolier;
+      $scope.$apply();
+    });
   };
+  $scope.hate = function(){
+    AllService.hateSpolier($scope.id,function(){
+      $scope.spolier.hates += 1;
+      $scope.disabled = true;
+      $scope.$apply();
+    });
+  };
+  $scope.refresh();
 });
