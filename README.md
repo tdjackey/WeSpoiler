@@ -1,4 +1,4 @@
 WeSpoiler
 =========
 
-Everyone can publish a spoiler
+Everyone can publish a spoiler!
