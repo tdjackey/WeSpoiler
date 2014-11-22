@@ -50,6 +50,11 @@ app.controller('SpolierCtrl', function ($scope, $routeParams, AllService) {
   $scope.refresh = function(){
     AllService.getSpolier($scope.id,function(spolier){
       $scope.spolier = spolier;
+      AllService.getMovie(spolier.movie,function(movie){
+        $scope.movie = movie;
+        console.log(movie);
+        $scope.apply();
+      });
       $scope.$apply();
     });
   };

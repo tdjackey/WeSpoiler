@@ -83,6 +83,7 @@ app.factory('AllService', function(){
         spolier.id = result.id;
         spolier.content = result.get('content');
         spolier.hates = result.get('hates');
+        spolier.movie = result.get('movie').id;
         successFunc(spolier);
       }
     });

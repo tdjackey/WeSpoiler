@@ -4,6 +4,17 @@
     <div>
       <button type="button" class="btn btn-danger" ng-disabled="disabled" ng-click="hate()">{{spolier.hates}} Hate </button>
     </div>
+    <div>
+      <ul ng-social-buttons
+          data-url="'http://wespolier.com/spolier/'+spolier.id"
+          data-title="'spolier for movie ' + movie.name"
+          data-description="spolier.content"
+          data-image="movie.poster">
+        <li class="ng-social-facebook">Facebook</li>
+        <li class="ng-social-google-plus">Google+</li>
+        <li class="ng-social-twitter">Twitter</li>
+      </ul>
+    </div>
   </div>
 
 </div>
