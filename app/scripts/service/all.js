@@ -61,6 +61,7 @@ app.factory('AllService', function(){
     movie.id = movieId;
     var spolierQuery = new AV.Query(spolierObject);
     spolierQuery.equalTo('movie',movie);
+    spolierQuery.descending('hates');
     spolierQuery.find({
       success: function(results){
         var spoliers = [];

@@ -20,9 +20,24 @@
 </div>
 <div class="row">
   <div class="list-group">
-    <a ng-repeat="spolier in spoliers" href="#/spolier/{{spolier.id}}" class="list-group-item">
-      <span class="badge">{{spolier.hates}}</span>
-      {{spolier.content}}
-    </a>
+    <div ng-repeat="spolier in spoliers"  class="list-group-item">
+      <span class="badge" ng-click="hate(spolier.id)">{{spolier.hates}} hate</span>
+      <a href="#/spolier/{{spolier.id}}">{{spolier.content}}</a>
+      <ul ng-social-buttons
+          data-url="'http://wespolier.com/spolier/'+spolier.id"
+          data-title="'spolier for movie ' + movie.name"
+          data-image="movie.poster"
+          data-description="spolier.content">
+        <li class="ng-social-facebook">
+          <img src="images/facebook.png"/>
+        </li>
+        <li class="ng-social-google-plus">
+          <img src="images/google_plus.png"/>
+        </li>
+        <li class="ng-social-twitter">
+          <img src="images/twitter.png" alt="" />
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

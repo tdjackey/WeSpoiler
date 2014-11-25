@@ -41,6 +41,16 @@ app.controller('MovieCtrl', function ($scope, $routeParams, AllService) {
       $scope.spolierContent = '';
     });
   };
+  $scope.hate = function(id){
+    AllService.hateSpolier(id, function(){
+      for(var i = 0; i < $scope.spoliers.length; i += 1){
+        if($scope.spoliers[i].id === id) {
+          $scope.spoliers[i].hates += 1;
+        }
+      }
+      $scope.$apply();
+    });
+  };
 
 });
 
