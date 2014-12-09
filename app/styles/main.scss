@@ -68,6 +68,23 @@ body {
   }
 }
 
+<<<<<<< HEAD
+=======
+.ng-social-container{
+  display: inline-block;
+  float: right;
+}
+.ng-social>li{
+  float: left;
+  list-style: none;
+  padding: 0 5px;
+  img{
+    height: 24px;
+    width: 24px;
+  }
+}
+
+>>>>>>> 78d319e1852c725b2747ac1467554c391cf9b772
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {

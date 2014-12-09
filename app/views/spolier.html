@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="jumbotron">
+    <h1>{{spolier.content}}</h1>
+    <div>
+      <button type="button" class="btn btn-danger" ng-disabled="disabled" ng-click="hate()">{{spolier.hates}} Hate </button>
+    </div>
+    <div>
+      <ul ng-social-buttons
+          data-url="'http://wespolier.com/spolier/'+spolier.id"
+          data-title="'spolier for movie ' + movie.name"
+          data-description="spolier.content"
+          data-image="movie.poster">
+        <li class="ng-social-facebook">
+          <img src="images/facebook.png"/>
+        </li>
+        <li class="ng-social-google-plus">
+          <img src="images/google_plus.png"/>
+        </li>
+        <li class="ng-social-twitter">
+          <img src="images/twitter.png" alt="" />
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
