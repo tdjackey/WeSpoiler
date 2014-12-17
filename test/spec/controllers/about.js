@@ -3,11 +3,7 @@
 describe('Controller: AboutCtrl', function () {
 
   // load the controller's module
-<<<<<<< HEAD
-  beforeEach(module('weSpoilerApp'));
-=======
-  beforeEach(module('wespoilerApp'));
->>>>>>> 78d319e1852c725b2747ac1467554c391cf9b772
+  beforeEach(module('yoTestApp'));
 
   var AboutCtrl,
     scope;

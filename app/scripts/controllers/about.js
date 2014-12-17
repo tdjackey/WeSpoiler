@@ -2,21 +2,12 @@
 
 /**
  * @ngdoc function
-<<<<<<< HEAD
- * @name weSpoilerApp.controller:AboutCtrl
+ * @name yoTestApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the weSpoilerApp
+ * Controller of the yoTestApp
  */
-angular.module('weSpoilerApp')
-=======
- * @name wespoilerApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the wespoilerApp
- */
-angular.module('wespoilerApp')
->>>>>>> 78d319e1852c725b2747ac1467554c391cf9b772
+angular.module('yoTestApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

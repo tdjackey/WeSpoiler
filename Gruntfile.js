@@ -1,4 +1,4 @@
-// Generated on 2014-11-22 using generator-angular 0.10.0
+// Generated on 2014-12-17 using generator-angular 0.10.0
 'use strict';
 
 // # Globbing
@@ -12,11 +12,7 @@ module.exports = function (grunt) {
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
-<<<<<<< HEAD
   // Time how long tasks take. Can help when optimizing build times
-=======
-
->>>>>>> 78d319e1852c725b2747ac1467554c391cf9b772
   require('time-grunt')(grunt);
 
   // Configurable paths for the application
@@ -70,11 +66,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-<<<<<<< HEAD
         port: 9000,
-=======
-        port: 9002,
->>>>>>> 78d319e1852c725b2747ac1467554c391cf9b772
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729
